@@ -25,5 +25,5 @@ jobs:
         python -m pytest tests/
       env:
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
