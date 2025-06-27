@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bot Status</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .status-card { 
+            border: 1px solid #ddd; 
+            padding: 15px; 
+            margin-bottom: 10px; 
+            border-radius: 5px;
+        }
+        .online { background-color: #d4edda; }
+        .stats { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Discord Bot Status</h1>
+    
+    <div class="status-card {{ 'online' if online else 'offline' }}">
+        <h2>Status: {{ 'Online' if online else 'Offline' }}</h2>
+        <p>Last checked: {{ timestamp }}</p>
+    </div>
+    
+    <div class="stats">
+        <h3>Statistics</h3>
+        <p>Commands processed: {{ commands_processed }}</p>
+        <p>Users served: {{ users_count }}</p>
+        <p>Average response time: {{ avg_response_time }}ms</p>
+    </div>
+</body>
+</html>
