@@ -22,7 +22,7 @@ jobs:
         
     - name: Run tests
       run: |
-        -m pytest tests/
+        python -m pytest tests/
       env:
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
